@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUCCI | Anti-Gravity Experience</title>
+    <meta name="description" content="Explore the luxury world of Gucci accessories in an immersive anti-gravity experience. Discover handbags, watches, shoes, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">GUCCI</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#featured">Collections</a>
+                <a href="#showcase">Showcase</a>
+                <a href="#highlights">Brand</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+            <button class="anti-gravity-btn" id="antiGravityBtn">
+                <span class="btn-icon">⚡</span>
+                <span class="btn-text">Anti-Gravity</span>
+            </button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge" data-reveal>LUXURY REDEFINED</div>
+            <h1 class="hero-title" data-reveal>
+                <span class="title-line">THE HOUSE OF</span>
+                <span class="title-line title-accent">GUCCI</span>
+            </h1>
+            <p class="hero-subtitle" data-reveal>Where timeless elegance meets the extraordinary. Experience luxury fashion in zero gravity.</p>
+            <div class="hero-cta" data-reveal>
+                <a href="#featured" class="btn-primary" id="exploreBtn">EXPLORE COLLECTION</a>
+                <button class="btn-secondary" id="triggerGravity">
+                    <span class="btn-pulse"></span>
+                    DEFY GRAVITY
+                </button>
+            </div>
+        </div>
+        <div class="hero-floating-items">
+            <div class="float-item float-1"><img src="images/bag.png" alt=""></div>
+            <div class="float-item float-2"><img src="images/watch.png" alt=""></div>
+            <div class="float-item float-3"><img src="images/shoes.png" alt=""></div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Featured Accessories -->
+    <section class="featured" id="featured">
+        <div class="section-container">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">CURATED SELECTION</span>
+                <h2 class="section-title">Featured <span class="accent">Accessories</span></h2>
+                <p class="section-desc">Discover our most coveted pieces, crafted with unparalleled artistry.</p>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <div class="product-card floatable" data-reveal data-category="bags">
+                    <div class="card-image">
+                        <img src="images/bag.png" alt="Gucci Dionysus Bag" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-tag">NEW ARRIVAL</span>
+                        </div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Dionysus GG Bag</h3>
+                        <p class="card-price">$2,980</p>
+                        <button class="card-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card floatable" data-reveal data-category="watches">
+                    <div class="card-image">
+                        <img src="images/watch.png" alt="Gucci G-Timeless Watch" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-tag">EXCLUSIVE</span>
+                        </div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>G-Timeless Watch</h3>
+                        <p class="card-price">$1,450</p>
+                        <button class="card-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card floatable" data-reveal data-category="shoes">
+                    <div class="card-image">
+                        <img src="images/shoes.png" alt="Gucci Ace Sneakers" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-tag">BESTSELLER</span>
+                        </div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Ace GG Sneakers</h3>
+                        <p class="card-price">$890</p>
+                        <button class="card-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card floatable" data-reveal data-category="eyewear">
+                    <div class="card-image">
+                        <img src="images/sunglasses.png" alt="Gucci Aviator Sunglasses" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-tag">TRENDING</span>
+                        </div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Aviator Sunglasses</h3>
+                        <p class="card-price">$540</p>
+                        <button class="card-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card floatable" data-reveal data-category="belts">
+                    <div class="card-image">
+                        <img src="images/belt.png" alt="Gucci GG Marmont Belt" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-tag">ICONIC</span>
+                        </div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>GG Marmont Belt</h3>
+                        <p class="card-price">$680</p>
+                        <button class="card-btn">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card floatable" data-reveal data-category="jewelry">
+                    <div class="card-image">
+                        <img src="images/jewelry.png" alt="Gucci Flora Ring" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-tag">LIMITED</span>
+                        </div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Flora Gold Ring</h3>
+                        <p class="card-price">$1,200</p>
+                        <button class="card-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="showcase" id="showcase">
+        <div class="section-container">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">THE COLLECTION</span>
+                <h2 class="section-title">Product <span class="accent">Showcase</span></h2>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-item showcase-large floatable" data-reveal>
+                    <img src="images/bag.png" alt="Gucci Spring Collection" loading="lazy">
+                    <div class="showcase-content">
+                        <span class="showcase-label">SPRING / SUMMER 2026</span>
+                        <h3>The Bamboo Collection</h3>
+                        <p>A tribute to Gucci's iconic bamboo handle, reimagined for the modern era.</p>
+                        <a href="#" class="showcase-link">Discover More →</a>
+                    </div>
+                    <div class="showcase-glow"></div>
+                </div>
+                <div class="showcase-item floatable" data-reveal>
+                    <img src="images/watch.png" alt="Gucci Runway" loading="lazy">
+                    <div class="showcase-content">
+                        <span class="showcase-label">RUNWAY</span>
+                        <h3>Milano Fashion Week</h3>
+                        <a href="#" class="showcase-link">View →</a>
+                    </div>
+                    <div class="showcase-glow"></div>
+                </div>
+                <div class="showcase-item floatable" data-reveal>
+                    <img src="images/jewelry.png" alt="Gucci Limited Edition" loading="lazy">
+                    <div class="showcase-content">
+                        <span class="showcase-label">LIMITED EDITION</span>
+                        <h3>Gucci × Art Basel</h3>
+                        <a href="#" class="showcase-link">Explore →</a>
+                    </div>
+                    <div class="showcase-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Highlights -->
+    <section class="highlights" id="highlights">
+        <div class="section-container">
+            <div class="highlights-grid" data-reveal>
+                <div class="highlight-stat" data-count="102">
+                    <span class="stat-number">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Years of Heritage</span>
+                </div>
+                <div class="highlight-stat" data-count="500">
+                    <span class="stat-number">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Boutiques Worldwide</span>
+                </div>
+                <div class="highlight-stat" data-count="50">
+                    <span class="stat-number">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Countries Represented</span>
+                </div>
+                <div class="highlight-stat" data-count="1000">
+                    <span class="stat-number">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Master Artisans</span>
+                </div>
+            </div>
+            <div class="brand-story" data-reveal>
+                <div class="story-visual">
+                    <div class="story-image-frame">
+                        <img src="images/belt.png" alt="Gucci Heritage" loading="lazy">
+                        <div class="frame-border"></div>
+                    </div>
+                </div>
+                <div class="story-content">
+                    <span class="section-tag">OUR LEGACY</span>
+                    <h2 class="section-title">A Century of <span class="accent">Excellence</span></h2>
+                    <p>Founded in Florence in 1921, Gucci has grown from a small leather goods company to one of the world's most influential luxury fashion houses. Each creation carries forward our commitment to exquisite craftsmanship and bold innovation.</p>
+                    <div class="story-features">
+                        <div class="feature">
+                            <div class="feature-icon">✦</div>
+                            <div>
+                                <h4>Italian Craftsmanship</h4>
+                                <p>Handcrafted by master artisans in Italy</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✦</div>
+                            <div>
+                                <h4>Sustainable Luxury</h4>
+                                <p>Committed to responsible fashion</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✦</div>
+                            <div>
+                                <h4>Timeless Design</h4>
+                                <p>Where tradition meets avant-garde vision</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="section-container">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">VISUAL JOURNEY</span>
+                <h2 class="section-title">The <span class="accent">Gallery</span></h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item floatable" data-reveal>
+                    <img src="images/bag.png" alt="Gucci Gallery" loading="lazy">
+                    <div class="gallery-overlay"><span>VIEW</span></div>
+                </div>
+                <div class="gallery-item gallery-tall floatable" data-reveal>
+                    <img src="images/watch.png" alt="Gucci Gallery" loading="lazy">
+                    <div class="gallery-overlay"><span>VIEW</span></div>
+                </div>
+                <div class="gallery-item floatable" data-reveal>
+                    <img src="images/shoes.png" alt="Gucci Gallery" loading="lazy">
+                    <div class="gallery-overlay"><span>VIEW</span></div>
+                </div>
+                <div class="gallery-item gallery-wide floatable" data-reveal>
+                    <img src="images/sunglasses.png" alt="Gucci Gallery" loading="lazy">
+                    <div class="gallery-overlay"><span>VIEW</span></div>
+                </div>
+                <div class="gallery-item floatable" data-reveal>
+                    <img src="images/belt.png" alt="Gucci Gallery" loading="lazy">
+                    <div class="gallery-overlay"><span>VIEW</span></div>
+                </div>
+                <div class="gallery-item floatable" data-reveal>
+                    <img src="images/jewelry.png" alt="Gucci Gallery" loading="lazy">
+                    <div class="gallery-overlay"><span>VIEW</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2 class="footer-logo">GUCCI</h2>
+                    <p>Redefining luxury since 1921.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+                        <a href="#" class="social-link" aria-label="Twitter">TW</a>
+                        <a href="#" class="social-link" aria-label="Facebook">FB</a>
+                        <a href="#" class="social-link" aria-label="Pinterest">PN</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Explore</h4>
+                        <a href="#">New Arrivals</a>
+                        <a href="#">Handbags</a>
+                        <a href="#">Shoes</a>
+                        <a href="#">Accessories</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <a href="#">Store Locator</a>
+                        <a href="#">Gift Cards</a>
+                        <a href="#">Book Appointment</a>
+                        <a href="#">Client Advisors</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Sustainability</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Press</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Gucci. All rights reserved. | Anti-Gravity Experience</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Anti-Gravity Overlay -->
+    <div class="gravity-overlay" id="gravityOverlay">
+        <div class="gravity-controls">
+            <div class="gravity-status">
+                <span class="status-icon">🌌</span>
+                <span class="status-text">ZERO GRAVITY MODE</span>
+            </div>
+            <button class="reset-btn" id="resetGravity">
+                <span>↻</span> RESTORE GRAVITY
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
